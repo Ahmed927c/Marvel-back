@@ -20,7 +20,7 @@ app.get('/comics', async (req, res) => {
             skip = req.query.skip;
         }
         const response = await axios.get(
-            // get the  comics from the api limit to 100 results and offset to 0 results
+            // get the  comics from the api limit to 100 results and offset to 0 
             `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${process.env.MARVEL_API_KEY}&title=${title}&limit=100&skip=${skip}`,
         );
 
